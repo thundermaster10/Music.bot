@@ -1,5 +1,5 @@
 #Kelangan ng youtube dl and ffmpeg
-#Ezra Pogi lmao xd 123
+#Ezra Pogi lmao xd 1234
 import asyncio
 import discord
 from discord.ext import commands, tasks
