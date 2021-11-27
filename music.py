@@ -1,4 +1,5 @@
-#Author Ezra
+#Kelangan ng youtube dl and ffmpeg
+#Ezra Pogi lmao xd 123
 import asyncio
 import discord
 from discord.ext import commands, tasks
@@ -7,7 +8,8 @@ import youtube_dl
 
 from random import choice
 
-TOKEN = 'ODg4OTc3MTU0NDgwNjg5MjEz.YUaifg.gVrUXOiurHy6ufWDTF_dbTqOXpE'
+#Discord Token
+TOKEN = ''
 
 youtube_dl.utils.bug_reports_message = lambda: ''
 
@@ -46,7 +48,6 @@ class YTDLSource(discord.PCMVolumeTransformer):
         data = await loop.run_in_executor(None, lambda: ytdl.extract_info(url, download=not stream))
 
         if 'entries' in data:
-            # take first item from a playlist
             data = data['entries'][0]
 
         filename = data['url'] if stream else ytdl.prepare_filename(data)
